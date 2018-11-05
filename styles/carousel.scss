@@ -1,0 +1,134 @@
+#section00 {
+  .main-wrapper {
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: radial-gradient(circle, #ffffff, #ffffff, #ffffff, #fbebee);
+    .wrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-family: 'Quicksand', sans-serif;
+      position: relative;
+      top: -2.5rem;
+      .card-carousel {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .card-carousel div:nth-child(1) {
+        background: url("../img/1.jpg") no-repeat;
+        background-size: cover;
+      }
+      .card-carousel div:nth-child(2) {
+        background: url("../img/2.jpg") no-repeat;
+        background-size: cover;
+      }
+      .card-carousel div:nth-child(3) {
+        background: url("../img/3.jpg") no-repeat;
+        background-size: cover;
+      }
+      .card-carousel div:nth-child(4) {
+        background: url("../img/4.jpg") no-repeat;
+        background-size: cover;
+      }
+      .card-carousel div:nth-child(5) {
+        background: url("../img/3.jpg") no-repeat;
+        background-size: cover;
+      }
+      .card-carousel div:nth-child(6) {
+        background: url("../img/1.jpg") no-repeat;
+        background-size: cover;
+      }
+      .card-carousel div:nth-child(7) {
+        background: url("../img/2.jpg") no-repeat;
+        background-size: cover;
+      }
+      .card-carousel div:nth-child(8) {
+        background: url("../img/3.jpg") no-repeat;
+        background-size: cover;
+      }
+      .card-carousel div:nth-child(9) {
+        background: url("../img/4.jpg") no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+}
+.card-carousel .my-card {
+  height: 30rem;
+  width: 35rem;
+  position: relative;
+  z-index: 1;
+  transform: scale(0.6) translateY(-2rem);
+  opacity: 0;
+  cursor: pointer;
+  pointer-events: none;
+  transition: 1s;
+  border: 10px solid #3a1f1c;
+  border-radius: 3px;
+  box-shadow: inset 0 0 200px 0 #250b0e;
+}
+
+.card-carousel .my-card:after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  border-radius: 100%;
+  background-color: rgba(0,0,0,0.3);
+  bottom: -5rem;
+  -webkit-filter: blur(4px);
+  filter: blur(4px);
+}
+.card-carousel .my-card:nth-child(0):before,
+.card-carousel .my-card:nth-child(1):before,
+.card-carousel .my-card:nth-child(2):before,
+.card-carousel .my-card:nth-child(3):before,
+.card-carousel .my-card:nth-child(4):before,
+.card-carousel .my-card:nth-child(5):before,
+.card-carousel .my-card:nth-child(6):before,
+.card-carousel .my-card:nth-child(7):before,
+.card-carousel .my-card:nth-child(8):before,
+.card-carousel .my-card:nth-child(9):before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+.card-carousel .my-card.active {
+  z-index: 3;
+  transform: scale(1) translateY(0) translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+  transition: 1s;
+}
+.card-carousel .my-card.prev, .card-carousel .my-card.next {
+  z-index: 2;
+  transform: scale(0.8) translateY(-1rem) translateX(0);
+  opacity: 0.6;
+  pointer-events: auto;
+  transition: 1s;
+}
+@media screen and (max-width: 855px) {
+  .card-carousel .my-card {
+    height: 20rem;
+    width: 20rem;
+  }
+}
+@media screen and (max-width: 490px) {
+  .card-carousel .my-card {
+    height: 9rem;
+    width: 9rem;
+  }
+  .card-carousel .my-card:hover {
+    transform: scale(1.2);
+  }
+}

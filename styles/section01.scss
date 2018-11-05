@@ -1,0 +1,46 @@
+#section01 {
+  padding: 50px 0 100px 0;
+  background: url("../img/bg-chocolate-dark.jpg") no-repeat;
+  background-size: cover;
+  align-items: center;
+  flex-direction: row;
+  .section01-wrapper {
+    margin: 15px;
+    .container {
+      display: flex;
+      margin: 3px;
+      p {
+        width: 270px;
+        min-height: 200px;
+        padding: 20px 10px;
+        margin: 5px;
+        text-align: center;
+        background: rgba(179, 157, 132, 0.6);
+        box-shadow: 0 0 0 4px #19010a;
+        border: 7px solid #291614;
+        border-radius: 5px;
+        font-weight: 700;
+        word-spacing: 0.2em;
+        letter-spacing: 0.02em;
+        line-height: 1.3em;
+      }
+      p:hover {
+        background: rgba(179, 157, 132, 0.8);
+        transition: 0.5s;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 830px) {
+    #section01 .section01-wrapper > div {
+        flex-direction: column;
+      align-items: center;
+    }
+  #section01 .section01-wrapper .container p {
+    width: 60%;
+    min-height: 100px;
+    padding: 10px 10px;
+    font-size: 0.9em;
+  }
+}
